@@ -1,5 +1,9 @@
-import CharacterList from "./componets/CharacterList";
+import PageCharacters from "../components/pageCharacters"
 
-export default function Home() {
-  return <CharacterList />;
+const Home = () => {
+  return (
+    <PageCharacters />
+  )
 }
+
+export default Home

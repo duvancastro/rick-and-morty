@@ -1,0 +1,28 @@
+/* styles/Card.module.css */
+.card {
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card Image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+
+  }
+  
+  .card h2 {
+    font-size: 2rem;
+    margin: 8px 0;
+  }
+  
+  .card h3 {
+    font-size: 2rem;
+    color: #666;
+    margin: 8px 0;
+  }
+  
