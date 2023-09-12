@@ -1,17 +1,17 @@
 import Head from "next/head";
 import Header from "./header";
 
-import Stiles from "../styles/layout.module.css";
+import Styles from "../styles/layout.module.css";
 
 const Layout = ({children}) => {
   
   return (
-    <div className={Stiles.layout}>
+    <div >
       <Head>
         <title>RICK AND MORTY</title>
       </Head>
-      <div>
-        <Header  />
+      <div className={Styles.layout}>
+        <Header/>
       {children}
       </div>    
 

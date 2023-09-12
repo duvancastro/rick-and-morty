@@ -1,11 +1,11 @@
 import Card from "./card";
-import Stile from '../styles/grid.module.css'
+import Styles from '../styles/grid.module.css'
 const Grid = ({ characters }) => {
   return (
-    <div className={Stile.grid}>
+    <div className={Styles.grid}>
       {characters.map((character) => {
         return (
-          <div key={character.id} >
+          <div key={character.id} className={Styles.grid_children} >
             <Card character={character} />
           </div>
         );

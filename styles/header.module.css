@@ -1,29 +1,10 @@
+ 
 .header {
-    background-image: url('https://images2.alphacoders.com/130/1300399.jpg');
-    background-size: 75%;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 38%;
-    padding: 30px;
-    position: relative;
-    width: 100%;
-
+    background-image: url('https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/8/AmazonStores/A1AM78C64UM0Y8/88a9732d54ce1de3a48e9c09d2f58fed.w3000.h600._CR0%2C0%2C3000%2C600_SX1500_.jpg');   
+    background-size: cover ;
+    height: 40vh;
+    
+    
 
 }
 
-.header h1 {
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
-    bottom: 0.8em;
-    width: 35%;
-    text-align: center;
-    font-family: 'Get Schwifty';
-    font-size: 5rem;
-    color: #08BAE3;
-    -webkit-text-stroke: 1.5px rgba(16, 16, 16, 0.721);
-    white-space: nowrap;
-    transform-origin: center bottom;
-    transform: rotate(-20deg);
-    margin-top: 25px;
-    margin-bottom: 25px;
-
-}

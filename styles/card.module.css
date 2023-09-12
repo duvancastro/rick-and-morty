@@ -1,28 +1,29 @@
-/* styles/Card.module.css */
 .card {
-    width: 100px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 1px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .card Image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
 
-  }
-  
-  .card h2 {
-    font-size: 2rem;
-    margin: 8px 0;
-  }
-  
-  .card h3 {
-    font-size: 2rem;
-    color: #666;
-    margin: 8px 0;
-  }
-  
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.Image {
+ width: 100%;
+}
+.card__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: hsl(0 0% 100% / 0.5);
+  height: 30%;
+}
+
+
+.card h2 {
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.card h3 {
+  font-size: 1.7rem;
+  color: #414141;
+  margin: 0;
+}

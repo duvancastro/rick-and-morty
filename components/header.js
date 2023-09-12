@@ -5,7 +5,7 @@ const Header = () => {
 
   return (
     <div className={Styles.header}>
-        <h1>RICK AND MORTY</h1>
+      
     </div>
   )
 }

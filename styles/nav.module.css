@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Get Schwifty';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+
+  background: linear-gradient(41deg, rgba(2,0,36,1) 0%, rgba(105,226,59,1) 50%, rgba(0,0,0,1) 100%);
+
+}
+
+.buttonNav{
+    font-size: 24px;
+    cursor: pointer;
+    font-family: 'Get Schwifty';
+    background-color: #4CAF50;
+    border-radius: 10px;
+    box-shadow: 0 4px #999;
+    width: 150px;
+    height: 60px;
+    text-shadow: 1px 1px 2px rgba(245, 242, 242, 0.67);
+  }
+  .buttonNav:hover {background-color: #3e8e41}
+  
+  .buttoNav:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .h1{
+    font-family: 'Get Schwifty';
+    text-shadow: 1px 1px 2px rgba(245, 242, 242, 0.67);
+    font-size: 2.5rem;
+    width: 100px;
+  }

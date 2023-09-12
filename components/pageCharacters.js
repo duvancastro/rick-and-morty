@@ -19,11 +19,10 @@ const PageCharacters = () => {
 
   return (
     <Layout>
-        <div className="">
 
       <Nav page={page} setPage={setPage} />
       <Grid characters={characters} />
-        </div>
+ 
     </Layout>
   );
 };
