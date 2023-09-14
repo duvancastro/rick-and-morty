@@ -1,6 +1,7 @@
-import PageCharacters from "../components/pageCharacters"
+import PageCharacters from "./pageCharacters"
 
 const Home = () => {
+  console.log("index")
   return (
     <PageCharacters />
   )
