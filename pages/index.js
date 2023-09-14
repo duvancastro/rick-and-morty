@@ -1,9 +1,13 @@
-import PageCharacters from "./pageCharacters"
+import Link from "next/link"
+import { useContext, useEffect } from "react"
+import CharactersContext from "../context/charaters/characterContext"
+
 
 const Home = () => {
-  console.log("index")
   return (
-    <PageCharacters />
+    <>
+      <Link href="/pageCharacters">pagina</Link>
+    </>
   )
 }
 

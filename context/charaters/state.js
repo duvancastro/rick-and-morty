@@ -1,33 +1,39 @@
-import characterscontext from './characterContext';
 import { GETCHARACTERS } from '../acciones';
 import { useReducer } from 'react';
-import characterReducer from './charactersreducer';
+import characterReducer from './charactersReducer';
 import axios from 'axios';
+import CharactersContext from './characterContext';
+
+
 const CharactersState = (props) => {
-  const initialState={
-    characters:{},
+  const initialState = {
+    characters: [],
+    page:1,
+    prevPage:0,
+    nextPage:2,
   }
   const [Characters, dispatch] = useReducer(characterReducer, initialState);
   const getCharacters = async () => {
     try {
-      console.log("getCharacters---------------------")
-      const res = await axios.get(`https://rickandmortyapi.com/api/character?`);
-      console.log(res)
-      const data = res.data.results;
-      console.log(data)
-      dispatch({ accion:GETCHARACTERS, characters: data });
-      console.log(`${Characters.characters} estoyyyyyyyyyy`)
+
+      const res = await axios.get(`https://rickandmortyapi.com/api/character?page=${Characters.page}`);
+      const data = await res.data
+
+      dispatch({ accion: GETCHARACTERS, characters: data.results });
     } catch (error) {
       console.error(error);
-      console.log(`errrrorrrrrrrrrrrr`)
     }
   };
+  
   return (
-    <characterscontext.Provider
-      value={{ charaters: Characters.charaters, getCharacters }}
+    <CharactersContext.Provider
+      value={{
+        charaters: Characters.characters,
+        getCharacters
+      }}
     >
       {props.children}
-    </characterscontext.Provider>
+    </CharactersContext.Provider>
   );
 }
 
