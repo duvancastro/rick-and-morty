@@ -1,12 +1,19 @@
-import { GETCHARACTERS } from "../acciones";
+import { GETCHARACTERS,SELECTCHARACTERS} from "../acciones";
 const characterReducer = (Characters, dataAccion) => {
-  const { characters, accion } = dataAccion;
+  const { data, accion } = dataAccion;
+  
   switch (accion) {
     case GETCHARACTERS:
       return {
         ...Characters,
-        characters: characters,
+        characters: data,
       };
+    case SELECTCHARACTERS:
+      console.log('entro sales')
+      return {
+        ...Characters,
+        character: data,
+      }
 
     default:
       return Characters
