@@ -27,7 +27,7 @@ const CharactersState = (props) => {
 
   };
   const selectCharacter=async(idCharacter)=>{
-  const character=Characters.characters.find(character=>character.id==idCharacter);
+  const character= await Characters.characters.find(character=>character.id==idCharacter);
   dispatch({ accion: SELECTCHARACTERS, data: character })
     console.log(Characters);
 
@@ -36,6 +36,7 @@ const CharactersState = (props) => {
   return (
     <CharactersContext.Provider
       value={{
+        allInfo:Characters,
         characters: Characters.characters,
         character: Characters.character,
         getCharacters,

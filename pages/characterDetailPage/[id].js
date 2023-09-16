@@ -1,20 +1,20 @@
 import Link from "next/link"
-import { useRouter } from "next/router";
 import Layout from "../../components/layout";
 import { useContext } from "react";
 import CharactersContext from "../../context/charaters/characterContext";
+import SelectCard from "../../components/selectCard";
 
 
 const CharacterDetailPage = () => {
-  const { charater } = useContext(CharactersContext);
-  const router = useRouter();
-  const { id } = router.query;
-  console.log(`charater: ${charater}`);
+  const { character } = useContext(CharactersContext);
+  const {id , name, image,species}=character
+  console.log(id , name, image,species)
+ 
 
   return (
     <Layout>
     <Link href="/pageCharacters">pagina</Link>
-    <h1>{id}</h1>
+    <SelectCard character={character}/>
   </Layout>
   
   )

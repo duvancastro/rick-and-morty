@@ -3,11 +3,12 @@ import Styles from '../styles/grid.module.css'
 import { useContext, useEffect } from "react";
 import CharactersContext from "../context/charaters/characterContext";
 const Grid = () => {
-  const { getCharacters, characters } = useContext(CharactersContext);
+  const { getCharacters, characters,selectCharacter } = useContext(CharactersContext);
 
   useEffect(() => {
     getCharacters()
-  }, );
+    
+  }, []);
 
   return (
     <div className={Styles.grid}>
@@ -15,9 +16,11 @@ const Grid = () => {
         return (
           <div key={character.id} className={Styles.grid_children} >
             <Card character={character} />
+
           </div>
         );
       })}
+      
     </div>
   );
 };

@@ -4,29 +4,35 @@ import Styles from "../styles/card.module.css";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import CharactersContext from "../context/charaters/characterContext";
+import Link from "next/link";
+
 
 const Card = ({ character }) => {
-  const router =useRouter()
+  const router = useRouter();
   const { selectCharacter } = useContext(CharactersContext);
-  const characterdata=async()=>{
-    selectCharacter(character.id)
-    router.push(`/characterDetailPage/ID=${character.id}`)
-  }
+  const handleClick = async () => {
+    if (character.id > 0) {
+      await selectCharacter(character.id);
+    }
+  };
+  
 
   return (
-    <div className={Styles.card} onClick={characterdata} >
-      <Image
-        src={character.image}
-        alt={character.name}
-        width={200}
-        height={200}
-        className={Styles.Image}
-      />
-      <div className={Styles.card__footer}>
-        <h2>{character.name}</h2>
-        <h3>{character.species}</h3>
+    <Link href={`/characterDetailPage/${character.id}`} passHref>
+      <div className={Styles.card} onClick={handleClick}>
+        <Image
+          src={character.image}
+          alt={character.name}
+          width={200}
+          height={200}
+          className={Styles.Image}
+        />
+        <div className={Styles.card__footer}>
+          <h2>{character.name}</h2>
+          <h3>{character.species}</h3>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

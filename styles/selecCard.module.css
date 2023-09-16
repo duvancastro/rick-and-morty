@@ -1,0 +1,127 @@
+/* styles.css */
+
+
+  
+ 
+  
+  /* Card styles follow */
+  
+  .card__back,
+  .card__front {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 0.25rem;
+    height: 18rem;
+    overflow: hidden;
+    width: 18rem;
+    position: absolute;
+    top: 0;
+  }
+  
+  .card__back {
+    background-color: #fefefe;
+    font-size: 0.875rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(180deg);
+  }
+  
+  .card__front {
+    display: grid;
+  }
+  
+  .card__button {
+    background: transparent;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.15),
+      -0.0625rem -0.0625rem 0.125rem rgba(0, 0, 0, 0.1);
+    height: 18rem;
+    position: relative;
+    transform: rotateY(0) scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.25s ease-in-out;
+    width: 18rem;
+  }
+  
+  .card__button:focus,
+  .card__button:hover {
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15),
+      -0.125rem -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: 0;
+    transform: rotateY(0) scale(1.05);
+  }
+  
+  .card__button.flipped:focus,
+  .card__button.flipped:hover {
+    transform: rotateY(180deg) scale(1.05);
+  }
+  
+  .card__button.flipped {
+    transform: rotateY(180deg) scale(1);
+  }
+  
+  .card__description {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 0.75rem;
+  }
+  
+  .card__detail {
+    text-align: start;
+  }
+  
+  .card__image {
+    grid-column: 1;
+    grid-row: 1;
+    height: 18rem;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .card__item {
+    perspective: 60rem;
+  }
+  
+  .card__item--loading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    grid-column: 1 / -1;
+    padding-bottom: 8rem;
+    width: 100%;
+  }
+  
+  .card__list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    justify-items: center;
+    list-style: none;
+  }
+  
+  .card__name {
+    align-self: end;
+    background: #62a4ab;
+    color: #fefefe;
+    font-size: 1rem;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 1.5rem 0.3rem 0.5rem;
+    text-align: start;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+  }
+  
+  .card__term {
+    font-weight: bold;
+    text-align: end;
+  }
+  
+  .card__term::after {
+    content: ": ";
+  }
+  
