@@ -13,6 +13,8 @@ const characterReducer = (Characters, dataAccion) => {
       return {
         ...Characters,
         character: data,
+        location: data.location,
+        episode: data.episode,
       }
 
     default:

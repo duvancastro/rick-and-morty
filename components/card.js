@@ -18,7 +18,7 @@ const Card = ({ character }) => {
   
 
   return (
-    <Link href={`/characterDetailPage/${character.id}`} passHref>
+    <Link href={`/characterDetailPage/id?id=${character.id}`} passHref>
       <div className={Styles.card} onClick={handleClick}>
         <Image
           src={character.image}

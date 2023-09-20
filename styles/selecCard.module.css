@@ -49,12 +49,12 @@
       -0.125rem -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     outline: 0;
-    transform: rotateY(0) scale(1.05);
+    transform: rotateY(0) ;
   }
   
   .card__button.flipped:focus,
   .card__button.flipped:hover {
-    transform: rotateY(180deg) scale(1.05);
+    transform: rotateY(180deg) ;
   }
   
   .card__button.flipped {

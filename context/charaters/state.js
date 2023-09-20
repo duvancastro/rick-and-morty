@@ -9,6 +9,8 @@ const CharactersState = (props) => {
   const initialState = {
     characters: [],
     character:{},
+    location:{},
+    episode:[],
     page:1,
     prevPage:0,
     nextPage:2,
@@ -39,6 +41,8 @@ const CharactersState = (props) => {
         allInfo:Characters,
         characters: Characters.characters,
         character: Characters.character,
+        location: Characters.location,
+        episode: Characters.episode,
         getCharacters,
         selectCharacter
       }}
