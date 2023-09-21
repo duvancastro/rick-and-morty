@@ -6,7 +6,9 @@ const characterReducer = (Characters, dataAccion) => {
     case GETCHARACTERS:
       return {
         ...Characters,
-        characters: data,
+        characters: data.characters,
+        actPage:data.page,
+
       };
     case SELECTCHARACTERS:
      

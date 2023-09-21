@@ -11,9 +11,8 @@ const CharactersState = (props) => {
     character:{},
     location:{},
     episode:[],
-    page:1,
-    prevPage:0,
-    nextPage:2,
+    actPage:null,
+
   }
   const [Characters, dispatch] = useReducer(characterReducer, initialState);
   const getCharacters = async (page) => {
@@ -22,7 +21,7 @@ const CharactersState = (props) => {
       const res = await axios.get(`https://rickandmortyapi.com/api/character?page=${page}`);
       const data = await res.data
 
-      dispatch({ accion: GETCHARACTERS, data: data.results });
+      dispatch({ accion: GETCHARACTERS, data:{characters:data.results ,page:page} });
     } catch (error) {
       console.error(error);
     }
@@ -49,6 +48,7 @@ const CharactersState = (props) => {
         character: Characters.character,
         location: Characters.location,
         episode: Characters.episode,
+        page: Characters.actPage,
         getCharacters,
         selectCharacter
       }}

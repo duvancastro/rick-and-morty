@@ -1,21 +1,11 @@
-/* styles.css */
 
-
-  
- 
-  
-  /* Card styles follow */
-  
   .card__back,
   .card__front {
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 0.25rem;
-    height: 18rem;
     overflow: hidden;
     width: 18rem;
     position: absolute;
-    top: 0;
   }
   
   .card__back {
@@ -33,11 +23,10 @@
     background: transparent;
     border: 0;
     border-radius: 0.25rem;
-    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.15),
-      -0.0625rem -0.0625rem 0.125rem rgba(0, 0, 0, 0.1);
-    height: 18rem;
+   
+ 
     position: relative;
-    transform: rotateY(0) scale(1);
+;
     transform-style: preserve-3d;
     transition: transform 0.25s ease-in-out;
     width: 18rem;
@@ -45,8 +34,7 @@
   
   .card__button:focus,
   .card__button:hover {
-    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15),
-      -0.125rem -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+
     cursor: pointer;
     outline: 0;
     transform: rotateY(0) ;

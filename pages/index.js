@@ -1,14 +1,11 @@
-import Link from "next/link"
-import { useContext, useEffect } from "react"
-import CharactersContext from "../context/charaters/characterContext"
+import Link from "next/link";
 
 const Home = () => {
   return (
     <>
-      <Link href="/pageCharacters">PAGINA DE LISATD DE PERSONAJES </Link>
-   
+      <Link href="/pageCharacters?page=1">PAGINA DE LISATD DE PERSONAJES </Link>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

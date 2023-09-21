@@ -3,7 +3,8 @@ import Styles from "../styles/grid.module.css";
 import { useContext, useEffect } from "react";
 import CharactersContext from "../context/charaters/characterContext";
 const Grid = () => {
-  const { characters } = useContext(CharactersContext);
+  const { characters,page } = useContext(CharactersContext);
+  console.log(page)
 
   return (
     <div className={Styles.grid}>
