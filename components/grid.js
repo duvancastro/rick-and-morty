@@ -1,26 +1,19 @@
 import Card from "./card";
-import Styles from '../styles/grid.module.css'
+import Styles from "../styles/grid.module.css";
 import { useContext, useEffect } from "react";
 import CharactersContext from "../context/charaters/characterContext";
 const Grid = () => {
-  const { getCharacters, characters,selectCharacter } = useContext(CharactersContext);
-
-  useEffect(() => {
-    getCharacters()
-    
-  }, []);
+  const { characters } = useContext(CharactersContext);
 
   return (
     <div className={Styles.grid}>
       {characters.map((character) => {
         return (
-          <div key={character.id} className={Styles.grid_children} >
+          <div key={character.id} className={Styles.grid_children}>
             <Card character={character} />
-
           </div>
         );
       })}
-      
     </div>
   );
 };

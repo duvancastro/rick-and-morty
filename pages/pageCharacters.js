@@ -1,16 +1,22 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import Layout from "../components/layout";
 import Nav from "../components/nav";
 import Grid from "../components/grid";
-import {  useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import Characterscontext from "../context/charaters/characterContext";
 
 const PageCharacters = () => {
-  console.log('estoy en PageCharacters')
-  let [page, setPage] = useState(1);
+  const [page, setPage] = useState(1);
+  const { getCharacters} =useContext(Characterscontext);
+  useEffect(() => {
+    getCharacters(page);
+  }, [page]);
   return (
     <Layout>
       <Nav page={page} setPage={setPage} />
       <Grid />
+      <Nav page={page} setPage={setPage} />
     </Layout>
   );
 };

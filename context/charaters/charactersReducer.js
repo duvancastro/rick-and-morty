@@ -1,4 +1,4 @@
-import { GETCHARACTERS,SELECTCHARACTERS} from "../acciones";
+import { GETCHARACTERS,SELECTCHARACTERS,NEXTPAGE,PREVPAGE} from "../acciones";
 const characterReducer = (Characters, dataAccion) => {
   const { data, accion } = dataAccion;
   
@@ -9,6 +9,22 @@ const characterReducer = (Characters, dataAccion) => {
         characters: data,
       };
     case SELECTCHARACTERS:
+     
+      return {
+        ...Characters,
+        character: data,
+        location: data.location,
+        episode: data.episode,
+      }
+    case NEXTPAGE:
+      
+      return {
+        ...Characters,
+        character: data,
+        location: data.location,
+        episode: data.episode,
+      }
+    case PREVPAGE:
       console.log('entro sales')
       return {
         ...Characters,

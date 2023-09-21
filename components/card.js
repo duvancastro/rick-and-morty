@@ -1,25 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Styles from "../styles/card.module.css";
-import { useRouter } from "next/router";
-import { useContext } from "react";
-import CharactersContext from "../context/charaters/characterContext";
 import Link from "next/link";
-
-
 const Card = ({ character }) => {
-  const router = useRouter();
-  const { selectCharacter } = useContext(CharactersContext);
-  const handleClick = async () => {
-    if (character.id > 0) {
-      await selectCharacter(character.id);
-    }
-  };
-  
-
   return (
     <Link href={`/characterDetailPage/id?id=${character.id}`} passHref>
-      <div className={Styles.card} onClick={handleClick}>
+      <div className={Styles.card}>
         <Image
           src={character.image}
           alt={character.name}
