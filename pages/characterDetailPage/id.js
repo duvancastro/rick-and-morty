@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Layout from "../../components/layout";
 import SelectCard from "../../components/selectCard";
+import Details from "../../components/detailCard";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
@@ -30,7 +31,8 @@ const CharacterDetailPage = () => {
     <Layout>
       <Link href={url}>pagina</Link>
       <div >
-      <SelectCard />
+      {/* <SelectCard /> */}
+      <Details/>
       </div>
     </Layout>
   );
