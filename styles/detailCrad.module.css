@@ -1,0 +1,33 @@
+.card_ext{
+    background-color: rgb(114, 158, 10);
+    width: 700px;
+    height: 350px;
+}
+.card_center{
+    background-color: gold;
+    width: 650px;
+    height: 300px;
+    
+}
+.card_internal{
+    background-color: black;
+    width: 630px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.card_ext, .card_center{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.texto{
+    color: aliceblue;
+    height: 30px;
+
+}
+.formulario{
+    display: grid;
+
+}
